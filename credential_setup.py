@@ -27,16 +27,9 @@ def main() -> None:
             "Enter the signing secret associated with the Slack `sre-agent` "
             "application: "
         ),
-        "AWS_REGION": input("Enter your AWS region: "),
-        "AWS_ACCOUNT_ID": input("Enter your AWS account ID: "),
         "TARGET_EKS_CLUSTER_NAME": input(
             "Enter your target EKS cluster name (the cluster the agent will interact "
             "with): "
-        ),
-        "SERVICES": str(
-            input(
-                "Enter the services running on the cluster (comma-separated): "
-            ).split(",")
         ),
         "HF_TOKEN": getpass(
             "Enter your Hugging Face API token, ensure this has read access to "
