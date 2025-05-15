@@ -52,7 +52,7 @@ cd ..
 Before deploying the Helm chart, you need to create a `values-secrets.yaml` file, we have provided a [`values-secrets.yaml.example`](../charts/sre-agent/values-secrets.yaml.example) file. We have also provided a helper function for creating this which can be run with the following command:
 
 ```bash
-python credential_setup.py --helm
+python credential_setup.py
 ```
 
 Now we can deploy the Helm chart with the `install` command:
