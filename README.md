@@ -6,6 +6,6 @@ In this project you can build all of the necessary infrastructure in an AWS acco
 
 ## Quick Start
 
-1. Deploy infrastructure using Terraform: [Documentation](../terraform/README.md)
+1. Deploy infrastructure using Terraform: [Documentation](terraform/README.md)
 
-2. Deploy services using Helm: [Documentation](../helm/README.md)
+2. Deploy services using Helm: [Documentation](helm/README.md)
