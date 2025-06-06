@@ -58,13 +58,13 @@ python credential_setup.py
 Now we can deploy the Helm chart with the `install` command:
 
 ```
-helm install sre-agent charts/sre-agent -f charts/sre-agent/values-secrets.yaml
+helm install sre-agent helm -f helm/values-secrets.yaml
 ```
 
 > [!NOTE]
 > You can perform a "dry-run" of the Helm chart to check for any errors before deploying with the following command:
 > ```
-> helm install sre-agent charts/sre-agent -f charts/sre-agent/values-secrets.yaml --dry-run
+> helm install sre-agent helm -f helm/values-secrets.yaml --dry-run
 > ```
 
 The `helm install` deploys all pods and services to the `sre-agent` namespace by default. Check that the pods and services all deploy correctly without erroring or restarting with the following command:
@@ -92,7 +92,7 @@ mcpSlack:
 If you have already deployed a service but no longer wish to use it, update the respective `enabled` value then run the Helm upgrade command:
 
 ```
-helm upgrade sre-agent charts/sre-agent
+helm upgrade sre-agent helm
 ```
 
 ## AWS permissions
