@@ -40,7 +40,7 @@ variable "target_cluster_arn" {
 variable "ecr_repositories" {
   description = "List of ECR repositories to create"
   type        = list(string)
-  default     = ["mcp/github", "mcp/kubernetes", "mcp/slack", "mcp/sre-orchestrator", "mcp/prompt-server", "mcp/llm-server"]
+  default     = ["mcp/github", "mcp/kubernetes", "mcp/slack", "mcp/sre-orchestrator", "mcp/prompt-server", "mcp/llm-server", "mcp/llama-firewall"]
 }
 
 variable "cluster_endpoint_public_access" {
