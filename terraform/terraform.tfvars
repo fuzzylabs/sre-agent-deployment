@@ -19,7 +19,10 @@ ecr_repositories = [
   "mcp/github",
   "mcp/kubernetes",
   "mcp/slack",
-  "mcp/sre-orchestrator"
+  "mcp/sre-orchestrator",
+  "mcp/prompt-server",
+  "mcp/llm-server",
+  "mcp/llama-firewall"
 ]
 
 # EKS managed node groups
