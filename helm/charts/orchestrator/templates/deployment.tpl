@@ -43,8 +43,3 @@ spec:
                 secretKeyRef:
                   name: "{{ .Release.Name }}-secret"
                   key: SLACK_SIGNING_SECRET
-            - name: HF_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: "{{ .Release.Name }}-secret"
-                  key: HF_TOKEN

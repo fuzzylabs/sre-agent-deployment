@@ -29,10 +29,19 @@ ecr_repositories = [
 eks_managed_node_groups = {
   main = {
     use_name_prefix = false
-    min_size      = 1
+    min_size      = 0
     max_size      = 2
     desired_size  = 1
     instance_types = ["t3.medium"]
+    use_custom_launch_template = true
+    block_device_mappings = {
+      root = {
+        device_name = "/dev/xvda"
+        ebs = {
+          volume_size = 64
+        }
+      }
+    }
   }
 }
 
