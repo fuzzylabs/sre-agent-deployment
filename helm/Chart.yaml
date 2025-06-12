@@ -24,3 +24,6 @@ dependencies:
   - name: mcpSlack
     version: 1.0.0
     repository: "file://charts/mcp-slack"
+  - name: llamaFirewall
+    version: 1.0.0
+    repository: "file://charts/llama-firewall"

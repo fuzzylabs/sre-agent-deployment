@@ -40,7 +40,7 @@ variable "target_cluster_arn" {
 variable "ecr_repositories" {
   description = "List of ECR repositories to create"
   type        = list(string)
-  default     = ["mcp/github", "mcp/kubernetes", "mcp/slack", "mcp/sre-orchestrator", "mcp/prompt-server", "mcp/llm-server"]
+  default     = ["mcp/github", "mcp/kubernetes", "mcp/slack", "mcp/sre-orchestrator", "mcp/prompt-server", "mcp/llm-server", "mcp/llama-firewall"]
 }
 
 variable "cluster_endpoint_public_access" {
@@ -65,6 +65,15 @@ variable "eks_managed_node_groups" {
       max_size     = 2
       desired_size = 1
       instance_types = ["t3.medium"]
+      use_custom_launch_template = true
+      block_device_mappings = {
+        root = {
+          device_name = "/dev/xvda"
+          ebs = {
+            volume_size = 64
+          }
+        }
+      }
     }
   }
 }
